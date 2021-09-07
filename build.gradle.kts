@@ -8,8 +8,8 @@ plugins {
 
 val compose = "1.0.2"
 
-version = "0.0.1"
-group = "com.keygenqt.surf_accompanist"
+version = "0.0.2"
+group = "com.keygenqt.accompanist"
 
 spotless {
     kotlin {

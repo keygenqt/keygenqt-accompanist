@@ -1,4 +1,4 @@
-package com.keygenqt.surf_accompanist
+package com.keygenqt.accompanist
 
 import android.util.Log
 import androidx.compose.foundation.layout.*
