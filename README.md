@@ -10,7 +10,7 @@ repositories {
     maven("https://artifactory.keygenqt.com/artifactory/open-source")
 }
 dependencies {
-    implementation("com.keygenqt.accompanist:surf-accompanist:0.0.2")
+    implementation("com.keygenqt.accompanist:surf-accompanist:0.0.3")
 }
 ```
 
