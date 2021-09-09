@@ -1,9 +1,8 @@
-Surf Accompanist
-===================
+## Surf Accompanist
 
-![picture](data/just-image.png)
+Accompanist is a group of libraries that aim to supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with features that are commonly required by developers but not yet available.
 
-#### Connection:
+### Connection
 
 ```gradle
 repositories {
@@ -14,31 +13,33 @@ dependencies {
 }
 ```
 
-### Components
+#### Components
 
-#### MainScaffoldSearch
+### MainScaffoldSearch
 ```kotlin
 /**
-Main for application body with searchable
-Params:
-    modifier - Modifier to apply to this layout node.
-    contentTitle - Content rendered in the topBar body
-    contentLoad - Content loader (default CircularProgressIndicator) rendered in the topBar body
-    contentLoadState - Loader state, true is enable false is disable
-    navigationIcon - Navigation icon nullable
-    navigationIconDescription - Navigation icon description
-    navigationIconOnClick - Navigation icon callback click
-    searchIcon - Search icon, default - Icons.Default.Search
-    searchIconDescription - Search icon description
-    searchListener - Callback text for search
-    closeSearchListener - Callback close search enable
-    searchTextColor - Color text
-    topBarIconColor - Color icons
-    topBarBackgroundColor - Color bg TobBar
-    searchDescription - Hint show after click search icon
-    topBarElevation - the elevation of this TopAppBar.
-    actions - for add custom IconButton-s
-    content - main body content
+ * Main for application body with searchable
+ *
+ * @param modifier Modifier to apply to this layout node.
+ * @param contentTitle Content rendered in the topBar body
+ * @param contentLoad Content loader (default it CircularProgressIndicator) rendered in the topBar body
+ * @param contentLoadState Loader state, true is enable false is disable
+ * @param navigationIcon Navigation icon nullable
+ * @param navigationIconDescription Navigation icon description
+ * @param navigationIconOnClick Navigation icon callback click
+ * @param searchIcon Search icon, default - Icons.Default.Search
+ * @param searchIconDescription Search icon description
+ * @param searchListener Callback text for search
+ * @param closeSearchListener Callback close search enable
+ * @param searchTextColor Color text
+ * @param topBarIconColor Color icons
+ * @param topBarBackgroundColor Color bg TobBar
+ * @param searchDescription Hint show after click search icon
+ * @param topBarElevation the elevation of this TopAppBar.
+ * @param actions for add custom IconButton-s
+ * @param content main body content
+ *
+ * @since 0.0.3
  */
 @Composable
 fun MainScaffoldSearch(
@@ -63,19 +64,21 @@ fun MainScaffoldSearch(
 )
 ```
 
-#### SwipeRefreshList
+### SwipeRefreshList
 ```kotlin
 /**
-Swipe Refresh + LazyColumn + Callbacks
-Params:
-    modifier - Modifier to apply to this layout node.
-    items - List items
-    state - rememberSwipeRefreshState
-    contentPadding - a padding around the whole content.
-    contentLoadState - loadState LoadState.Loading / LoadState.Error
-    contentLoading - Content screen LoadState.Loading
-    contentEmpty - Content screen empty data
-    content - Content item model
+ * Swipe Refresh + LazyColumn + Callbacks
+ *
+ * @param modifier Modifier to apply to this layout node.
+ * @param items List items.
+ * @param state rememberSwipeRefreshState.
+ * @param contentPadding a padding around the whole content.
+ * @param contentLoadState loadState  LoadState.Loading / LoadState.Error.
+ * @param contentLoading Content screen LoadState.Loading.
+ * @param contentEmpty Content screen empty data.
+ * @param content Content item model.
+ **
+ * @since 0.0.3
  */
 @Composable
 fun <T : Any> SwipeRefreshList(
@@ -90,23 +93,26 @@ fun <T : Any> SwipeRefreshList(
 )
 ```
 
-#### ClickableTextColorAnimation
+### ClickableTextColorAnimation
 ```kotlin
 /**
-Clickable text color animation
-Params:
-    modifier - Modifier to apply to this layout node.
-    colorDefault - Color for default state.
-    colorAction - Color for animate.
-    text - Text value.
-    delay - Delay animation time.
-    style - Text style.
-    underline - Text style underline.
-    softWrap - Whether the text should break at soft line breaks.
-    maxLines - An optional maximum number of lines for the text to span, wrapping if necessary.
-    overflow - How visual overflow should be handled.
-    onTextLayout - How visual overflow should be handled.
-    onClick - Callback that is executed when users click the text. This callback is called with clicked character's offset.
+ * Clickable text color animation
+ *
+ * @param modifier Modifier to apply to this layout node.
+ * @param colorDefault Color for default state.
+ * @param colorAction Color for animate.
+ * @param text Text value.
+ * @param delay Delay animation time.
+ * @param style Text style.
+ * @param underline Text style underline.
+ * @param softWrap Whether the text should break at soft line breaks.
+ * @param maxLines An optional maximum number of lines for the text to span, wrapping if necessary.
+ * @param overflow How visual overflow should be handled.
+ * @param onTextLayout How visual overflow should be handled.
+ * @param onClick Callback that is executed when users click the text. This callback is called
+ * with clicked character's offset.
+ *
+ * @since 0.0.3
  */
 @Composable
 fun ClickableTextColorAnimation(
@@ -141,4 +147,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-```
