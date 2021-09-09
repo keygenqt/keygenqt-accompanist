@@ -23,7 +23,7 @@ Main for application body with searchable
 Params:
     modifier - Modifier to apply to this layout node.
     contentTitle - Content rendered in the topBar body
-    contentLoad - Content loader (default it CircularProgressIndicator) rendered in the topBar body
+    contentLoad - Content loader (default CircularProgressIndicator) rendered in the topBar body
     contentLoadState - Loader state, true is enable false is disable
     navigationIcon - Navigation icon nullable
     navigationIconDescription - Navigation icon description
