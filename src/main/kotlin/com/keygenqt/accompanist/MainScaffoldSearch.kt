@@ -80,7 +80,7 @@ fun MainScaffoldSearch(
 
     val softwareKeyboardController = LocalSoftwareKeyboardController.current
     var isShowSearch by remember { mutableStateOf(false) }
-    val state = remember { FormFieldState() }
+    val state = remember { FieldState() }
     val requester = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
 

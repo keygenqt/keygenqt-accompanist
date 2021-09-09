@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 
-class FormFieldState(text: String = "") {
+class FieldState(text: String = "") {
 
     private var _default = TextFieldValue(text = text)
     private var _text: TextFieldValue by mutableStateOf(_default)
@@ -27,13 +27,13 @@ class FormFieldState(text: String = "") {
         )
     }
 
-    fun default(value: String): FormFieldState {
+    fun default(value: String): FieldState {
         _default = TextFieldValue(text = value)
         _text = _default
         return this
     }
 
-    fun clear(): FormFieldState {
+    fun clear(): FieldState {
         _text = _default
         return this
     }
