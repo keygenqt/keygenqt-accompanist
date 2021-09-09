@@ -19,26 +19,26 @@ dependencies {
 #### MainScaffoldSearch
 ```kotlin
 /**
-    Main for application body with searchable
-    Params:
-        modifier - Modifier to apply to this layout node.
-        contentTitle - Content rendered in the topBar body
-        contentLoad - Content loader (default it CircularProgressIndicator) rendered in the topBar body
-        contentLoadState - Loader state, true is enable false is disable
-        navigationIcon - Navigation icon nullable
-        navigationIconDescription - Navigation icon description
-        navigationIconOnClick - Navigation icon callback click
-        searchIcon - Search icon, default - Icons.Default.Search
-        searchIconDescription - Search icon description
-        searchListener - Callback text for search
-        closeSearchListener - Callback close search enable
-        searchTextColor - Color text
-        topBarIconColor - Color icons
-        topBarBackgroundColor - Color bg TobBar
-        searchDescription - Hint show after click search icon
-        topBarElevation - the elevation of this TopAppBar.
-        actions - for add custom IconButton-s
-        content - main body content
+Main for application body with searchable
+Params:
+    modifier - Modifier to apply to this layout node.
+    contentTitle - Content rendered in the topBar body
+    contentLoad - Content loader (default it CircularProgressIndicator) rendered in the topBar body
+    contentLoadState - Loader state, true is enable false is disable
+    navigationIcon - Navigation icon nullable
+    navigationIconDescription - Navigation icon description
+    navigationIconOnClick - Navigation icon callback click
+    searchIcon - Search icon, default - Icons.Default.Search
+    searchIconDescription - Search icon description
+    searchListener - Callback text for search
+    closeSearchListener - Callback close search enable
+    searchTextColor - Color text
+    topBarIconColor - Color icons
+    topBarBackgroundColor - Color bg TobBar
+    searchDescription - Hint show after click search icon
+    topBarElevation - the elevation of this TopAppBar.
+    actions - for add custom IconButton-s
+    content - main body content
  */
 @Composable
 fun MainScaffoldSearch(
@@ -66,16 +66,16 @@ fun MainScaffoldSearch(
 #### SwipeRefreshList
 ```kotlin
 /**
-    Swipe Refresh + LazyColumn + Callbacks
-    Params:
-        modifier - Modifier to apply to this layout node.
-        items - List items
-        state - rememberSwipeRefreshState
-        contentPadding - a padding around the whole content.
-        contentLoadState - loadState LoadState.Loading / LoadState.Error
-        contentLoading - Content screen LoadState.Loading
-        contentEmpty - Content screen empty data
-        content - Content item model
+Swipe Refresh + LazyColumn + Callbacks
+Params:
+    modifier - Modifier to apply to this layout node.
+    items - List items
+    state - rememberSwipeRefreshState
+    contentPadding - a padding around the whole content.
+    contentLoadState - loadState LoadState.Loading / LoadState.Error
+    contentLoading - Content screen LoadState.Loading
+    contentEmpty - Content screen empty data
+    content - Content item model
  */
 @Composable
 fun <T : Any> SwipeRefreshList(
@@ -93,20 +93,20 @@ fun <T : Any> SwipeRefreshList(
 #### ClickableTextColorAnimation
 ```kotlin
 /**
-    Clickable text color animation
-    Params:
-        modifier - Modifier to apply to this layout node.
-        colorDefault - Color for default state.
-        colorAction - Color for animate.
-        text - Text value.
-        delay - Delay animation time.
-        style - Text style.
-        underline - Text style underline.
-        softWrap - Whether the text should break at soft line breaks.
-        maxLines - An optional maximum number of lines for the text to span, wrapping if necessary.
-        overflow - How visual overflow should be handled.
-        onTextLayout - How visual overflow should be handled.
-        onClick - Callback that is executed when users click the text. This callback is called with clicked character's offset.
+Clickable text color animation
+Params:
+    modifier - Modifier to apply to this layout node.
+    colorDefault - Color for default state.
+    colorAction - Color for animate.
+    text - Text value.
+    delay - Delay animation time.
+    style - Text style.
+    underline - Text style underline.
+    softWrap - Whether the text should break at soft line breaks.
+    maxLines - An optional maximum number of lines for the text to span, wrapping if necessary.
+    overflow - How visual overflow should be handled.
+    onTextLayout - How visual overflow should be handled.
+    onClick - Callback that is executed when users click the text. This callback is called with clicked character's offset.
  */
 @Composable
 fun ClickableTextColorAnimation(
