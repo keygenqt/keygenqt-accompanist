@@ -25,7 +25,7 @@ import com.keygenqt.modifier.visible
 const val TAG = "SwipeRefreshList"
 
 /**
- * Swipe Refresh + LazyColumn + Callbacks
+ * LazyColumn with embedded SwipeRefresh and set of states for content: Error, Empty, Loading
  *
  * @param modifier Modifier to apply to this layout node.
  * @param items List items.

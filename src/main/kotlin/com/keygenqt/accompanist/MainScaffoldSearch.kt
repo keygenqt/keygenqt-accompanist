@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 
 /**
- * Main for application body with searchable
+ * The main block of the application with topBar which has a built-in search and loader
  *
  * @param modifier Modifier to apply to this layout node.
  * @param contentTitle Content rendered in the topBar body

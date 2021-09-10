@@ -7,7 +7,6 @@ supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with
 developers but not yet available.
 
 ### Connection
-
 ```gradle
 repositories {
     maven("https://artifactory.keygenqt.com/artifactory/open-source")
@@ -17,129 +16,22 @@ dependencies {
 }
 ```
 
-#### Components
+#### Surf Accompanist contains:
 
-### MainScaffoldSearch
+## :mag_right: [MainScaffoldSearch](/docs/MainScaffoldSearch.md)
+The main block of the application with topBar which has a built-in search and loader
 
-```kotlin
-/**
- * Main for application body with searchable
- *
- * @param modifier Modifier to apply to this layout node.
- * @param contentTitle Content rendered in the topBar body
- * @param contentLoad Content loader (default it CircularProgressIndicator) rendered in the topBar body
- * @param contentLoadState Loader state, true is enable false is disable
- * @param navigationIcon Navigation icon nullable
- * @param navigationIconDescription Navigation icon description
- * @param navigationIconOnClick Navigation icon callback click
- * @param searchIcon Search icon, default - Icons.Default.Search
- * @param searchIconDescription Search icon description
- * @param searchListener Callback text for search
- * @param closeSearchListener Callback close search enable
- * @param searchTextColor Color text
- * @param topBarIconColor Color icons
- * @param topBarBackgroundColor Color bg TobBar
- * @param searchDescription Hint show after click search icon
- * @param topBarElevation the elevation of this TopAppBar.
- * @param actions for add custom IconButton-s
- * @param content main body content
- *
- * @since 0.0.3
- */
-@Composable
-fun MainScaffoldSearch(
-    modifier: Modifier = Modifier,
-    contentTitle: @Composable (() -> Unit)? = null,
-    contentLoad: @Composable (() -> Unit)? = null,
-    contentLoadState: Boolean = false,
-    navigationIcon: ImageVector? = null,
-    navigationIconDescription: String = "Navigate up",
-    navigationIconOnClick: () -> Unit = {},
-    searchIcon: ImageVector = Icons.Default.Search,
-    searchIconDescription: String = "Search",
-    searchListener: ((String?) -> Unit)? = null,
-    closeSearchListener: (() -> Unit)? = null,
-    searchTextColor: Color = MaterialTheme.colors.onPrimary,
-    topBarIconColor: Color = MaterialTheme.colors.onPrimary,
-    topBarBackgroundColor: Color = MaterialTheme.colors.primary,
-    searchDescription: String = "Search...",
-    topBarElevation: Dp = AppBarDefaults.TopAppBarElevation,
-    actions: @Composable ((RowScope) -> Unit)? = null,
-    content: @Composable (PaddingValues) -> Unit,
-)
-```
+### :scroll: [SwipeRefreshList](./docs/SwipeRefreshList.md)
+[LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyColumn(androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,kotlin.Boolean,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.ui.Alignment.Horizontal,androidx.compose.foundation.gestures.FlingBehavior,kotlin.Function1))
+with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error, Empty, Loading
 
-### SwipeRefreshList
+### :link: [ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
+Clickable text with color animation on click
 
-```kotlin
-/**
- * Swipe Refresh + LazyColumn + Callbacks
- *
- * @param modifier Modifier to apply to this layout node.
- * @param items List items.
- * @param state rememberSwipeRefreshState.
- * @param contentPadding a padding around the whole content.
- * @param contentLoadState loadState  LoadState.Loading / LoadState.Error.
- * @param contentLoading Content screen LoadState.Loading.
- * @param contentEmpty Content screen empty data.
- * @param content Content item model.
- **
- * @since 0.0.3
- */
-@Composable
-fun <T : Any> SwipeRefreshList(
-    modifier: Modifier = Modifier,
-    items: LazyPagingItems<T>,
-    state: SwipeRefreshState = rememberSwipeRefreshState(items.loadState.refresh is LoadState.Loading),
-    contentPadding: PaddingValues = PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 0.dp),
-    contentLoadState: @Composable ((LoadState) -> Unit)? = null,
-    contentLoading: @Composable (() -> Unit)? = null,
-    contentEmpty: @Composable (() -> Unit)? = null,
-    content: @Composable (Int, T) -> Unit,
-)
-```
-
-### ClickableTextColorAnimation
-
-```kotlin
-/**
- * Clickable text color animation
- *
- * @param modifier Modifier to apply to this layout node.
- * @param colorDefault Color for default state.
- * @param colorAction Color for animate.
- * @param text Text value.
- * @param delay Delay animation time.
- * @param style Text style.
- * @param underline Text style underline.
- * @param softWrap Whether the text should break at soft line breaks.
- * @param maxLines An optional maximum number of lines for the text to span, wrapping if necessary.
- * @param overflow How visual overflow should be handled.
- * @param onTextLayout How visual overflow should be handled.
- * @param onClick Callback that is executed when users click the text. This callback is called
- * with clicked character's offset.
- *
- * @since 0.0.3
- */
-@Composable
-fun ClickableTextColorAnimation(
-    modifier: Modifier = Modifier,
-    colorDefault: Color,
-    colorAction: Color,
-    text: String,
-    delay: Long = 500,
-    style: TextStyle = TextStyle.Default,
-    underline: Boolean = true,
-    softWrap: Boolean = true,
-    maxLines: Int = Int.MAX_VALUE,
-    overflow: TextOverflow = TextOverflow.Clip,
-    onTextLayout: (TextLayoutResult) -> Unit = {},
-    onClick: () -> Unit,
-)
-```
+## Future?
+There are plans to add common functionality to make life easier for developers, saving them from custom solutions.
 
 # License
-
 ```
 Copyright 2021 Vitaliy Zarubin
 
