@@ -23,7 +23,9 @@ dependencies {
 The main block of the application with topBar which has a built-in search and loader
 
 ### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/18dp/1x/baseline_view_list_black_18dp.png?raw=true) [SwipeRefreshList](https://keygenqt.github.io/surf-accompanist/SwipeRefreshList) 
-LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Empty, Loading
+[LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyColumn(androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,kotlin.Boolean,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.ui.Alignment.Horizontal,androidx.compose.foundation.gestures.FlingBehavior,kotlin.Function1))
+with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error,
+Empty, Loading
 
 ### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](https://keygenqt.github.io/surf-accompanist/ClickableTextColorAnimation) 
 Clickable text with color animation on click
