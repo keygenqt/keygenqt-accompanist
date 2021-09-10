@@ -19,21 +19,17 @@ dependencies {
 
 ## Features:
 
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/search/manage_search/materialicons/24dp/1x/baseline_manage_search_black_24dp.png?raw=true) 
-[MainScaffoldSearch](./docs/MainScaffoldSearch.md)
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/search/manage_search/materialicons/24dp/1x/baseline_manage_search_black_24dp.png?raw=true) [MainScaffoldSearch](./docs/MainScaffoldSearch.md)
 
 The main block of the application with topBar which has a built-in search and loader
 
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/24dp/1x/baseline_view_list_black_24dp.png?raw=true)
-
-[SwipeRefreshList](./docs/SwipeRefreshList.md)
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/24dp/1x/baseline_view_list_black_24dp.png?raw=true) [SwipeRefreshList](./docs/SwipeRefreshList.md)
 
 [LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyColumn(androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,kotlin.Boolean,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.ui.Alignment.Horizontal,androidx.compose.foundation.gestures.FlingBehavior,kotlin.Function1))
 with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error,
 Empty, Loading
 
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/24dp/1x/baseline_link_black_24dp.png?raw=true)
-[ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/24dp/1x/baseline_link_black_24dp.png?raw=true) [ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
 
 Clickable text with color animation on click
 
