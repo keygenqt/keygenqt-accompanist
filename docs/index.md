@@ -19,9 +19,14 @@ dependencies {
 
 ## Features:
 
-* ![picture](https://github.com/google/material-design-icons/blob/master/png/search/manage_search/materialicons/18dp/1x/baseline_manage_search_black_18dp.png?raw=true) [MainScaffoldSearch](https://keygenqt.github.io/surf-accompanist/MainScaffoldSearch) The main block of the application with topBar which has a built-in search and loader
-* ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/18dp/1x/baseline_view_list_black_18dp.png?raw=true) [SwipeRefreshList](https://keygenqt.github.io/surf-accompanist/SwipeRefreshList) LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Empty, Loading
-* ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](https://keygenqt.github.io/surf-accompanist/ClickableTextColorAnimation) Clickable text with color animation on click
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/search/manage_search/materialicons/18dp/1x/baseline_manage_search_black_18dp.png?raw=true) [MainScaffoldSearch](https://keygenqt.github.io/surf-accompanist/MainScaffoldSearch) 
+The main block of the application with topBar which has a built-in search and loader
+
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/18dp/1x/baseline_view_list_black_18dp.png?raw=true) [SwipeRefreshList](https://keygenqt.github.io/surf-accompanist/SwipeRefreshList) 
+LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Empty, Loading
+
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](https://keygenqt.github.io/surf-accompanist/ClickableTextColorAnimation) 
+Clickable text with color animation on click
 
 ## Future?
 
