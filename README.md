@@ -27,7 +27,7 @@ The main block of the application with topBar which has a built-in search and lo
 with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error,
 Empty, Loading
 
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/24dp/1x/baseline_link_black_24dp.png?raw=true)[ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
 Clickable text with color animation on click
 
 ## Future?
