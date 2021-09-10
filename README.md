@@ -18,14 +18,14 @@ dependencies {
 
 #### Surf Accompanist contains:
 
-### :mag_right: [MainScaffoldSearch](./docs/MainScaffoldSearch.md)
+* ### :mag_right: [MainScaffoldSearch](./docs/MainScaffoldSearch.md)
 The main block of the application with topBar which has a built-in search and loader
 
-### :scroll: [SwipeRefreshList](./docs/SwipeRefreshList.md)
+* ### :scroll: [SwipeRefreshList](./docs/SwipeRefreshList.md)
 [LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyColumn(androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,kotlin.Boolean,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.ui.Alignment.Horizontal,androidx.compose.foundation.gestures.FlingBehavior,kotlin.Function1))
 with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error, Empty, Loading
 
-### :link: [ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
+* ### :link: [ClickableTextColorAnimation](./docs/ClickableTextColorAnimation.md)
 Clickable text with color animation on click
 
 ## Future?
