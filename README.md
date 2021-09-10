@@ -1,6 +1,6 @@
 ## Surf Accompanist
 
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat)]()
+![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fartifactory.keygenqt.com%2Fartifactory%2Fopen-source%2Fcom%2Fkeygenqt%2Fsurf_accompanist%2Fsurf-accompanist%2Fmaven-metadata.xml)
 
 ![picture](https://github.com/keygenqt/surf-accompanist/blob/master/data/just-image.png?raw=true)
 
