@@ -2,10 +2,6 @@
 
 ![picture](https://github.com/keygenqt/surf-accompanist/blob/master/data/just-image.png?raw=true)
 
-Accompanist is a group of libraries that aim to
-supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with features that are commonly required by
-developers but not yet available.
-
 ## Connection
 
 ```gradle
