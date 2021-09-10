@@ -18,7 +18,7 @@ dependencies {
 
 #### Surf Accompanist contains:
 
-## :mag_right: [MainScaffoldSearch](/docs/MainScaffoldSearch.md)
+### :mag_right: [MainScaffoldSearch](/docs/MainScaffoldSearch.md)
 The main block of the application with topBar which has a built-in search and loader
 
 ### :scroll: [SwipeRefreshList](./docs/SwipeRefreshList.md)
