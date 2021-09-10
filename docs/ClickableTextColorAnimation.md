@@ -1,9 +1,9 @@
 ### ClickableTextColorAnimation
 
+Clickable text with color animation on click
+
 ```kotlin
 /**
- * Clickable text color animation
- *
  * @param modifier Modifier to apply to this layout node.
  * @param colorDefault Color for default state.
  * @param colorAction Color for animate.
@@ -17,8 +17,6 @@
  * @param onTextLayout How visual overflow should be handled.
  * @param onClick Callback that is executed when users click the text. This callback is called
  * with clicked character's offset.
- *
- * @since 0.0.3
  */
 @Composable
 fun ClickableTextColorAnimation(

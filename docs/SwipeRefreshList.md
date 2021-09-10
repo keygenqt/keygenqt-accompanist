@@ -1,9 +1,9 @@
 ### SwipeRefreshList
 
+LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Empty, Loading
+
 ```kotlin
 /**
- * Swipe Refresh + LazyColumn + Callbacks
- *
  * @param modifier Modifier to apply to this layout node.
  * @param items List items.
  * @param state rememberSwipeRefreshState.
@@ -12,8 +12,6 @@
  * @param contentLoading Content screen LoadState.Loading.
  * @param contentEmpty Content screen empty data.
  * @param content Content item model.
- **
- * @since 0.0.3
  */
 @Composable
 fun <T : Any> SwipeRefreshList(

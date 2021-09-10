@@ -1,9 +1,9 @@
 ### MainScaffoldSearch
 
+The main block of the application with topBar which has a built-in search and loader
+
 ```kotlin
 /**
- * Main for application body with searchable
- *
  * @param modifier Modifier to apply to this layout node.
  * @param contentTitle Content rendered in the topBar body
  * @param contentLoad Content loader (default it CircularProgressIndicator) rendered in the topBar body
@@ -22,8 +22,6 @@
  * @param topBarElevation the elevation of this TopAppBar.
  * @param actions for add custom IconButton-s
  * @param content main body content
- *
- * @since 0.0.3
  */
 @Composable
 fun MainScaffoldSearch(
