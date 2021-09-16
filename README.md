@@ -8,7 +8,7 @@ developers but not yet available.
 
 ## Connection
 
-![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fartifactory.keygenqt.com%2Fartifactory%2Fopen-source%2Fcom%2Fkeygenqt%2Fsurf_accompanist%2Fsurf-accompanist%2Fmaven-metadata.xml)
+![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https://artifactory.keygenqt.com/artifactory/open-source/com/keygenqt/accompanist/surf-accompanist/maven-metadata.xml)
 
 ```gradle
 repositories {
