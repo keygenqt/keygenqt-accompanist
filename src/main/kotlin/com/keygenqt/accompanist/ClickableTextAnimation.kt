@@ -72,9 +72,9 @@ fun ClickableTextColorAnimation(
         click = true
         scope.launch {
             delay(delay)
+            onClick.invoke()
             click = false
         }
-        onClick.invoke()
     }
 
     LaunchedEffect(click) {
