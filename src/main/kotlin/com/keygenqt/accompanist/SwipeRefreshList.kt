@@ -10,7 +10,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
@@ -132,7 +131,7 @@ fun <T : Any> SwipeRefreshList(
         }
     }
 
-    if (items.loadState.mediator != null) {
+    if (items.loadState.source.prepend.endOfPaginationReached) {
         if (items.itemCount == 0
             && items.loadState.refresh !is LoadState.Loading
             && items.loadState.prepend !is LoadState.Loading
