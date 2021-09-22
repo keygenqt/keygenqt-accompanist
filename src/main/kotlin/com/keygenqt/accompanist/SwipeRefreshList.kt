@@ -65,7 +65,6 @@ fun <T : Any> SwipeRefreshList(
         },
         modifier = modifier
             .fillMaxSize()
-            .statusBarsPadding()
     ) {
         if (items.itemCount != 0) {
             LazyColumn(

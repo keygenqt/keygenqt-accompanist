@@ -186,12 +186,9 @@ fun MainScaffoldSearch(
 
                         if (contentLoadState) {
                             contentLoad?.invoke() ?: run {
-                                Column(
-                                    modifier = modifier
-                                        .fillMaxHeight()
-                                        .padding(16.dp),
-                                    verticalArrangement = Arrangement.Center,
-                                    horizontalAlignment = Alignment.CenterHorizontally
+                                Box(
+                                    modifier = Modifier.size(48.dp),
+                                    contentAlignment = Alignment.Center
                                 ) {
                                     CircularProgressIndicator(
                                         strokeWidth = 2.dp,
