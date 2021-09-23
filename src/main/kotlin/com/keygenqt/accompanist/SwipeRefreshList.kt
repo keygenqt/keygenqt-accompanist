@@ -10,6 +10,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
@@ -29,6 +30,7 @@ const val TAG = "SwipeRefreshList"
  * @param modifier Modifier to apply to this layout node.
  * @param items List items.
  * @param state rememberSwipeRefreshState.
+ * @param indicator the indicator that represents the current state. By default this will use a [SwipeRefreshIndicator].
  * @param contentPadding a padding around the whole content.
  * @param contentLoadState loadState  LoadState.Loading / LoadState.Error.
  * @param contentLoading Content screen LoadState.Loading.
@@ -45,6 +47,9 @@ fun <T : Any> SwipeRefreshList(
     modifier: Modifier = Modifier,
     items: LazyPagingItems<T>,
     state: SwipeRefreshState = rememberSwipeRefreshState(items.loadState.refresh is LoadState.Loading),
+    indicator: @Composable (state: SwipeRefreshState, refreshTrigger: Dp) -> Unit = { s, trigger ->
+        SwipeRefreshIndicator(s, trigger)
+    },
     contentPadding: PaddingValues = PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 0.dp),
     contentLoadState: @Composable ((LoadState) -> Unit)? = null,
     contentLoading: @Composable (() -> Unit)? = null,
@@ -56,13 +61,7 @@ fun <T : Any> SwipeRefreshList(
         onRefresh = {
             items.refresh()
         },
-        indicator = { st, tr ->
-            SwipeRefreshIndicator(
-                state = st,
-                refreshTriggerDistance = tr,
-                contentColor = MaterialTheme.colors.onPrimary,
-            )
-        },
+        indicator = indicator,
         modifier = modifier
             .fillMaxSize()
     ) {
