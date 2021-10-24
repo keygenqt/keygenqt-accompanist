@@ -22,6 +22,4 @@ jobs:
 
       - name: Build site
         run: |
-          mv docs docs-gen
-          mkdocs build
-          mv site docs
+          mkdocs gh-deploy --force
