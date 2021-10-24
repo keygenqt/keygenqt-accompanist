@@ -24,3 +24,5 @@ jobs:
         run: |
           mkdir docs-gen
           mkdocs build
+          mv docs _docs
+          mv docs-gen docs
