@@ -1,5 +1,12 @@
 site_name: Surf Accompanist
 
+# Navigation
+nav:
+  - 'Overview': index.md
+  - 'MainScaffoldSearch': MainScaffoldSearch.md
+  - 'SwipeRefreshList': SwipeRefreshList.md
+  - 'ClickableTextColorAnimation': ClickableTextColorAnimation.md
+
 # Configuration
 theme:
   name: 'material'
