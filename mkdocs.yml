@@ -1,5 +1,9 @@
 site_name: Surf Accompanist
 
+# Repository
+repo_name: 'Surf Accompanist'
+repo_url: 'https://github.com/keygenqt/surf-accompanist'
+
 # Navigation
 nav:
   - 'Overview': index.md
