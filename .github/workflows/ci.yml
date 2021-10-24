@@ -25,4 +25,4 @@ jobs:
           mkdir docs-gen
           mkdocs build
           mv docs __docs
-          mv docs-gen docs
+          mv site docs
