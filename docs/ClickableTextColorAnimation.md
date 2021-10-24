@@ -1,5 +1,3 @@
-### ClickableTextColorAnimation
-
 Clickable text with color animation on click
 
 ```kotlin

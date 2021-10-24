@@ -1,5 +1,3 @@
-### SwipeRefreshList
-
 LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Empty, Loading
 
 ```kotlin

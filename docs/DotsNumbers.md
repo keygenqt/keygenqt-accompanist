@@ -1,5 +1,3 @@
-### Dots Numbers
-
 Coming soon...
 
 ### Preview

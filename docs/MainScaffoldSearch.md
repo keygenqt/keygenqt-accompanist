@@ -1,5 +1,3 @@
-### MainScaffoldSearch
-
 The main block of the application with topBar which has a built-in search and loader
 
 ```kotlin
