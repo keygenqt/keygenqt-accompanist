@@ -1,5 +1,3 @@
-## Surf Accompanist
-
 ![picture](https://github.com/keygenqt/surf-accompanist/blob/master/data/just-image.png?raw=true)
 
 Accompanist is a group of libraries that aim to
