@@ -22,7 +22,6 @@ jobs:
 
       - name: Build site
         run: |
-          mkdir docs-gen
+          mv docs docs-gen
           mkdocs build
-          mv docs __docs
           mv site docs
