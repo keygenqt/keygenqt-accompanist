@@ -23,4 +23,4 @@ jobs:
       - name: Build site
         run: |
           mkdir docs-gen
-          run: mkdocs build
+          mkdocs build
