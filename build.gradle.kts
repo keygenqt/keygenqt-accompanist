@@ -6,7 +6,7 @@ plugins {
     id("com.diffplug.spotless")
 }
 
-val compose = "1.0.2"
+val compose = "1.0.5"
 
 version = "0.0.9"
 group = "com.keygenqt.accompanist"
