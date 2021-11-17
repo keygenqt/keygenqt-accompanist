@@ -38,7 +38,9 @@ fun ClickableTextColorAnimation(
     modifier: Modifier = Modifier,
     colorDefault: Color,
     colorAction: Color,
+    colorDisable: Color,
     text: String,
+    enabled: Boolean,
     delay: Long = 500,
     style: TextStyle = TextStyle.Default,
     underline: Boolean = true,
@@ -62,18 +64,20 @@ fun ClickableTextColorAnimation(
         text = buildAnnotatedString {
             withStyle(
                 style = SpanStyle(
-                    color = color.value,
+                    color = if (enabled) color.value else colorDisable,
                 )
             ) {
                 append(text)
             }
         },
     ) {
-        click = true
-        scope.launch {
-            delay(delay)
-            onClick.invoke()
-            click = false
+        if (enabled) {
+            click = true
+            scope.launch {
+                delay(delay)
+                onClick.invoke()
+                click = false
+            }
         }
     }
 
