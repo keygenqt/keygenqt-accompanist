@@ -1,4 +1,4 @@
-![picture](https://github.com/keygenqt/surf-accompanist/blob/master/data/just-image.png?raw=true)
+![picture](https://github.com/surfstudio/surf-accompanist/blob/master/data/just-image.png?raw=true)
 
 **Surf Accompanist** is a group of libraries that aim to
 supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with features that are commonly required by
@@ -6,14 +6,14 @@ developers but not yet available.
 
 ## Connection
 
-![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fartifactory.keygenqt.com%2Fartifactory%2Fopen-source%2Fcom%2Fkeygenqt%2Fsurf_accompanist%2Fsurf-accompanist%2Fmaven-metadata.xml)
+![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fartifactory.surfstudio.ru%2Fartifactory%2Flibs-release-local%2Fru%2Fsurfstudio%2Fcompose%2Faccompanist%2Fmaven-metadata.xml)
 
 ```gradle
 repositories {
-    maven("https://artifactory.keygenqt.com/artifactory/open-source")
+    maven("https://artifactory.surfstudio.ru/artifactory/libs-release-local")
 }
 dependencies {
-    implementation("com.keygenqt.accompanist:surf-accompanist:{version}")
+    implementation("ru.surfstudio.compose:accompanist:${version}")
 }
 ```
 
@@ -37,7 +37,7 @@ There are plans to add common functionality to make life easier for developers, 
 ## License
 
 ```
-Copyright 2021 Vitaliy Zarubin
+Copyright 2021 Surf LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
