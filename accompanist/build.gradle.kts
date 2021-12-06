@@ -20,7 +20,7 @@ publishing {
         register("aar", MavenPublication::class) {
             groupId = group.toString()
             artifactId = project.name
-            artifact("$buildDir/outputs/aar/accompanist-$version-release.aar")
+            artifact("$buildDir/outputs/aar/surf-accompanist-$version-release.aar")
         }
     }
 }
