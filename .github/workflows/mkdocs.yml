@@ -1,4 +1,4 @@
-name: ci
+name: mkdocs
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
       - main
 jobs:
-  deploy:
+  mkdocs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
