@@ -12,15 +12,16 @@ val pagingComposeVersion: String by project
 val modifierVersion: String by project
 
 // lib info
-version = "0.0.10"
-group = "ru.surfstudio.compose"
+val libVersion: String by project
+val libGroup: String by project
 
 publishing {
     publications {
         register("aar", MavenPublication::class) {
-            groupId = group.toString()
+            version = libVersion
+            groupId = libGroup
             artifactId = project.name
-            artifact("$buildDir/outputs/aar/surf-accompanist-$version-release.aar")
+            artifact("$buildDir/outputs/aar/surf-accompanist-$libVersion-release.aar")
         }
     }
 }
@@ -47,7 +48,7 @@ android {
     defaultConfig {
         minSdk = 23
         targetSdk = 31
-        setProperty("archivesBaseName", "surf-accompanist-$version")
+        setProperty("archivesBaseName", "surf-accompanist-$libVersion")
     }
 
     composeOptions {
