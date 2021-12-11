@@ -15,12 +15,11 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.itemsIndexed
-import com.google.accompanist.insets.statusBarsPadding
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.SwipeRefreshState
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import com.keygenqt.modifier.visible
+import com.keygenqt.accompanist.extensions.visible
 
 const val TAG = "SwipeRefreshList"
 
@@ -79,7 +78,7 @@ fun <T : Any> SwipeRefreshList(
                 }
                 items.apply {
                     when {
-                        this.loadState.append is LoadState.Loading -> {
+                        loadState.append is LoadState.Loading -> {
                             item {
                                 contentLoadState?.let {
                                     contentLoadState.invoke(LoadState.Loading)
@@ -91,29 +90,28 @@ fun <T : Any> SwipeRefreshList(
                                             .wrapContentWidth(Alignment.CenterHorizontally)
                                     )
                                 }
+                                Log.e(TAG, "Refresh append")
                             }
                         }
-                        this.loadState.refresh is LoadState.Error -> {
+                        loadState.refresh is LoadState.Error -> {
                             val error = items.loadState.refresh as? LoadState.Error
                             error?.let {
                                 item {
                                     contentLoadState?.let {
                                         contentLoadState.invoke(error)
-                                    } ?: run {
-                                        Log.e(TAG, "Refresh error: ${error.error.localizedMessage}")
                                     }
+                                    Log.e(TAG, "Refresh error: ${error.error.localizedMessage}")
                                 }
                             }
                         }
-                        this.loadState.append is LoadState.Error -> {
+                        loadState.append is LoadState.Error -> {
                             val error = items.loadState.append as? LoadState.Error
                             error?.let {
                                 item {
                                     contentLoadState?.let {
                                         contentLoadState.invoke(error)
-                                    } ?: run {
-                                        Log.e(TAG, "Append error: ${error.error.localizedMessage}")
                                     }
+                                    Log.e(TAG, "Append error: ${error.error.localizedMessage}")
                                 }
                             }
                         }

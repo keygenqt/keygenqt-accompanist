@@ -78,7 +78,4 @@ dependencies {
     implementation("com.google.accompanist:accompanist-insets:$accompanist")
     implementation("com.google.accompanist:accompanist-pager:$accompanist")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanist")
-
-    val modifier = "0.0.2"
-    implementation("com.keygenqt.modifier:compose-modifier-ext:$modifier")
 }

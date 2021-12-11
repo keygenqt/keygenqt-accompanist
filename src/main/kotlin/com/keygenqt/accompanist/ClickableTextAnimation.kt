@@ -38,9 +38,9 @@ fun ClickableTextColorAnimation(
     modifier: Modifier = Modifier,
     colorDefault: Color,
     colorAction: Color,
-    colorDisable: Color,
+    colorDisable: Color? = null,
     text: String,
-    enabled: Boolean,
+    enabled: Boolean = true,
     delay: Long = 500,
     style: TextStyle = TextStyle.Default,
     underline: Boolean = true,
@@ -64,7 +64,7 @@ fun ClickableTextColorAnimation(
         text = buildAnnotatedString {
             withStyle(
                 style = SpanStyle(
-                    color = if (enabled) color.value else colorDisable,
+                    color = if (enabled) color.value else colorDisable ?: color.value,
                 )
             ) {
                 append(text)
