@@ -8,7 +8,7 @@ plugins {
 
 val compose = "1.0.5"
 
-version = "0.0.11"
+version = "0.0.12"
 group = "com.keygenqt.accompanist"
 
 spotless {
