@@ -80,6 +80,4 @@ dependencies {
     implementation("com.google.accompanist:accompanist-insets:$googleAccompanistVersion")
     implementation("com.google.accompanist:accompanist-pager:$googleAccompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$googleAccompanistVersion")
-
-    implementation("ru.surfstudio.compose:modifier-ext:$modifierVersion")
 }

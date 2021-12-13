@@ -33,7 +33,9 @@ import kotlinx.coroutines.launch
  * @param modifier Modifier to apply to this layout node.
  * @param colorDefault Color for default state.
  * @param colorAction Color for animate.
+ * @param colorDisable Color for disabled state.
  * @param text Text value.
+ * @param enabled Enabled state.
  * @param delay Delay animation time.
  * @param style Text style.
  * @param underline Text style underline.
@@ -54,9 +56,9 @@ fun ClickableTextColorAnimation(
     modifier: Modifier = Modifier,
     colorDefault: Color,
     colorAction: Color,
-    colorDisable: Color,
+    colorDisable: Color? = null,
     text: String,
-    enabled: Boolean,
+    enabled: Boolean = true,
     delay: Long = 500,
     style: TextStyle = TextStyle.Default,
     underline: Boolean = true,
@@ -80,7 +82,7 @@ fun ClickableTextColorAnimation(
         text = buildAnnotatedString {
             withStyle(
                 style = SpanStyle(
-                    color = if (enabled) color.value else colorDisable,
+                    color = if (enabled) color.value else colorDisable ?: color.value,
                 )
             ) {
                 append(text)
