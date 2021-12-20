@@ -17,3 +17,4 @@ pluginManagement {
 
 rootProject.name = "surf-accompanist"
 include(":accompanist")
+include(":sample")
