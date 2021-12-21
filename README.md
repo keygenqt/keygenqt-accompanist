@@ -32,6 +32,9 @@ Empty, Loading
 ### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](https://keygenqt.github.io/surf-accompanist/ClickableTextColorAnimation)
 Clickable text with color animation on click
 
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) BaseBottomSheetScaffold
+Bottom sheet scaffold for app with auto show/hide and resize
+
 ## Future?
 
 There are plans to add common functionality to make life easier for developers, saving them from custom solutions.
