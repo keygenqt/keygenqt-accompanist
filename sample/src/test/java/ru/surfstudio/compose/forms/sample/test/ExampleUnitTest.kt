@@ -13,16 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.surfstudio.compose.accompanist.extensions
+package ru.surfstudio.compose.forms.sample.test
 
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
+import org.junit.Test
+
+import org.junit.Assert.*
 
 /**
- * Controlling element visibility based on transparency
+ * Example local unit test, which will execute on the development machine (host).
  *
- * @property [visibility] visible/invisible
- *
- * @author Vitaliy Zarubin
+ * See [testing documentation](http://d.android.com/tools/testing).
  */
-fun Modifier.visible(visibility: Boolean): Modifier = this.then(alpha(if (visibility) 1f else 0f))
+class ExampleUnitTest {
+    @Test
+    fun addition_isCorrect() {
+        assertEquals(4, 2 + 2)
+    }
+}

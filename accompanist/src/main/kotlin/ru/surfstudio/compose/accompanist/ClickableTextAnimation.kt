@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
 package ru.surfstudio.compose.accompanist
 
 import androidx.compose.animation.Animatable

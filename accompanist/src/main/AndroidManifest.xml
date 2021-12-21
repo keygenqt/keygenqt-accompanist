@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="ru.surfstudio.compose.accompanist" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.surfstudio.compose.accompanist">
+
+    <application>
+        <activity
+            android:name="ru.surfstudio.compose.accompanist.BottomSheetScaffoldActivity"
+            android:theme="@style/Theme.DialogTransparent"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+</manifest>

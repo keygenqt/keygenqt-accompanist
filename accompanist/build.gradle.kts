@@ -74,10 +74,13 @@ dependencies {
 
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-
     implementation("androidx.paging:paging-compose:$pagingComposeVersion")
+    implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
+
+    implementation("androidx.fragment:fragment-ktx:1.4.0")
 
     implementation("com.google.accompanist:accompanist-insets:$googleAccompanistVersion")
     implementation("com.google.accompanist:accompanist-pager:$googleAccompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$googleAccompanistVersion")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$googleAccompanistVersion")
 }

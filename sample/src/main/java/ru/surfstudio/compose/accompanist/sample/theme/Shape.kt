@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.surfstudio.compose.accompanist.extensions
+package ru.surfstudio.compose.accompanist.sample.theme
 
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Shapes
+import androidx.compose.ui.unit.dp
 
-/**
- * Controlling element visibility based on transparency
- *
- * @property [visibility] visible/invisible
- *
- * @author Vitaliy Zarubin
- */
-fun Modifier.visible(visibility: Boolean): Modifier = this.then(alpha(if (visibility) 1f else 0f))
+val Shapes = Shapes(
+    small = RoundedCornerShape(4.dp),
+    medium = RoundedCornerShape(4.dp),
+    large = RoundedCornerShape(0.dp)
+)
