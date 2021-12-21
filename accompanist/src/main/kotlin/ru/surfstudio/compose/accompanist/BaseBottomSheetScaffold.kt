@@ -31,6 +31,7 @@ import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.insets.navigationBarsWithImePadding
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import kotlinx.coroutines.flow.MutableStateFlow
+import ru.surfstudio.compose.accompanist.BottomSheetScaffoldActivity.Companion.DEFAULT_BACKGROUND_COLOR
 
 /**
  * State for driving open/close
@@ -49,6 +50,7 @@ fun BaseBottomSheetScaffold(
     isIconClose: Boolean = true,
     navigationBarColor: Color = Color.White,
     systemBarsColor: Color = Color.White,
+    backgroundColor: Color = DEFAULT_BACKGROUND_COLOR,
     onClose: () -> Unit = {},
     content: @Composable ColumnScope.() -> Unit,
 ) {
@@ -64,7 +66,8 @@ fun BaseBottomSheetScaffold(
                 isIconClose = isIconClose,
                 systemBarsColor = systemBarsColor,
                 composeContent = content,
-                navigationBarColor = navigationBarColor
+                navigationBarColor = navigationBarColor,
+                backgroundColor = backgroundColor
             )
             context.startActivity(Intent(context, BottomSheetScaffoldActivity::class.java))
         }
@@ -86,10 +89,13 @@ fun BaseBottomSheetScaffold(
 class BottomSheetScaffoldActivity : FragmentActivity() {
     companion object {
 
+        val DEFAULT_BACKGROUND_COLOR = Color.Black.copy(alpha = 0.7f)
+
         private var activityTitle: String? = null
         private var activityIsIconClose: Boolean = true
         private var activitySystemBarsColor: Color? = null
         private var activityNavigationBarColor: Color? = null
+        private var activityBackgroundColor: Color = DEFAULT_BACKGROUND_COLOR
         private var activityComposeContent: (@Composable ColumnScope.() -> Unit)? = null
         private var currentActivity: FragmentActivity? = null
 
@@ -102,12 +108,14 @@ class BottomSheetScaffoldActivity : FragmentActivity() {
             isIconClose: Boolean = true,
             systemBarsColor: Color?,
             navigationBarColor: Color?,
+            backgroundColor: Color,
             composeContent: (@Composable ColumnScope.() -> Unit),
         ) {
             activityTitle = title
             activityIsIconClose = isIconClose
             activitySystemBarsColor = systemBarsColor
             activityNavigationBarColor = navigationBarColor
+            activityBackgroundColor = backgroundColor
             activityComposeContent = composeContent
         }
     }
@@ -133,7 +141,7 @@ class BottomSheetScaffoldActivity : FragmentActivity() {
                         modifier = Modifier
                             .fillMaxSize()
                             .navigationBarsWithImePadding()
-                            .background(Color.Black.copy(alpha = 0.7f))
+                            .background(activityBackgroundColor)
                     ) {
                         BaseBottomSheetScaffold()
                     }
@@ -171,9 +179,7 @@ class BottomSheetScaffoldActivity : FragmentActivity() {
             sheetElevation = 0.dp,
             sheetContent = {
                 Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(max = 1000.dp)
+                    modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
                         modifier = Modifier

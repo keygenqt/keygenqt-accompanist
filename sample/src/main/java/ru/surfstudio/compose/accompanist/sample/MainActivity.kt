@@ -20,12 +20,15 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import ru.surfstudio.compose.accompanist.BaseBottomSheetScaffold
 import ru.surfstudio.compose.accompanist.sample.theme.TestTheme
 
 @ExperimentalComposeUiApi
@@ -41,9 +44,22 @@ class MainActivity : ComponentActivity() {
 @ExperimentalComposeUiApi
 @Composable
 fun MainScreen() {
+    var isShowBottomSheetScaffold by remember { mutableStateOf(true) }
+
     TestTheme {
-        Surface {
-            Text("hey")
+        Surface(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            BaseBottomSheetScaffold(
+                title = "Title",
+                isIconClose = true,
+                isShow = isShowBottomSheetScaffold,
+                onClose = {
+                    isShowBottomSheetScaffold = false
+                }
+            ) {
+                Text("Text")
+            }
         }
     }
 }
