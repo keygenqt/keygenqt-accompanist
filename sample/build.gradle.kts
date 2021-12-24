@@ -4,7 +4,7 @@ plugins {
 }
 
 // dependencies versions
-val composeVersion: String by project
+val composeVersion: String = "1.1.0-beta01" //by project
 
 android {
     compileSdk = 31
