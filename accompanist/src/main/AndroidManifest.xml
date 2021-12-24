@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.surfstudio.compose.accompanist">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application>
         <activity
             android:name="ru.surfstudio.compose.accompanist.BottomSheetScaffoldActivity"

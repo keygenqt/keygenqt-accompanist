@@ -35,6 +35,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.surfstudio.compose.accompanist.BaseBottomSheetScaffold
+import ru.surfstudio.compose.accompanist.keyboard.BaseViewKeyboard
 import ru.surfstudio.compose.accompanist.sample.theme.TestTheme
 
 @ExperimentalComposeUiApi
@@ -64,6 +65,7 @@ fun MainScreen() {
                 ) {
                     Text(text = "Show dialog")
                 }
+                BaseViewKeyboard(forgotCodeText = "Forgot code?")
                 BaseBottomSheetScaffold(
                     isShow = isShowBottomSheetScaffold,
                     onClose = onClose,
