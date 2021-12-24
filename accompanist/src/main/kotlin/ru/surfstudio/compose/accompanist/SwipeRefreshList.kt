@@ -35,7 +35,7 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.SwipeRefreshState
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import ru.surfstudio.compose.accompanist.extensions.visible
+import ru.surfstudio.compose.modifier.visible
 
 private const val TAG = "SwipeRefreshList"
 

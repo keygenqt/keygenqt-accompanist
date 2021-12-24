@@ -13,16 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.surfstudio.compose.accompanist.extensions
+package ru.surfstudio.compose.accompanist.sample
 
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-
-/**
- * Controlling element visibility based on transparency
- *
- * @property [visibility] visible/invisible
- *
- * @author Vitaliy Zarubin
- */
-fun Modifier.visible(visibility: Boolean): Modifier = this.then(alpha(if (visibility) 1f else 0f))
+internal sealed class MainScreen(val route: String) {
+    object Start : MainScreen("start")
+    object Otp : MainScreen("otp")
+}

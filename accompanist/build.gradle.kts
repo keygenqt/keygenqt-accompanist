@@ -43,7 +43,7 @@ artifactory {
 
 android {
 
-    compileSdk = 30
+    compileSdk = 31
 
     defaultConfig {
         minSdk = 23
@@ -71,6 +71,8 @@ android {
 }
 
 dependencies {
+
+    implementation("ru.surfstudio.compose:modifier-ext:0.0.12")
 
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
