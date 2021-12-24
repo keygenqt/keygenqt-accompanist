@@ -65,7 +65,7 @@ fun OtpScreen(viewModel: OtpViewModel) {
                 ) {
                     BaseViewKeyboard(
                         modifier = Modifier.align(Alignment.BottomCenter),
-                        forgotCodeText = "Forgot code?",
+                        actionText = "Forgot code?",
                         isShowRemove = !isBlank,
                         isShowFingerprint = isBlank,
                         onPress = { key ->

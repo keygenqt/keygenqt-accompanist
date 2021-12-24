@@ -50,8 +50,8 @@ import ru.surfstudio.compose.modifier.ifTrue
  */
 @Composable
 fun BaseViewKeyboard(
-    forgotCodeText: String,
     modifier: Modifier = Modifier,
+    actionText: String? = null,
     @DrawableRes fingerprintIconRes: Int = R.drawable.ic_default_fingerprint_24,
     @DrawableRes removeIconRes: Int = R.drawable.ic_default_arrow_back_24,
     isEnabled: Boolean = true,
@@ -59,7 +59,6 @@ fun BaseViewKeyboard(
     textColor: Color = MaterialTheme.colors.onSurface,
     backgroundColor: Color = MaterialTheme.colors.surface,
     isShowFingerprint: Boolean = false,
-    isShowForgotPassword: Boolean = true,
     onFingerprint: (() -> Unit) = {},
     onPress: (String) -> Unit = {},
     onRemove: () -> Unit = {},
@@ -123,7 +122,7 @@ fun BaseViewKeyboard(
                 shape = shape,
                 modifier = modifierKey
             ) {
-                if (isShowForgotPassword) {
+                if (!actionText.isNullOrBlank()) {
                     Box(
                         modifier = Modifier
                             .clickable {
@@ -133,7 +132,7 @@ fun BaseViewKeyboard(
                     ) {
                         Text(
                             color = textColor,
-                            text = forgotCodeText,
+                            text = actionText,
                             textAlign = TextAlign.Center,
                             modifier = Modifier.align(Alignment.Center)
                         )
