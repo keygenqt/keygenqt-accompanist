@@ -15,7 +15,6 @@
  */
 package ru.surfstudio.compose.accompanist.sample
 
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -31,11 +30,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Devices
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import ru.surfstudio.compose.accompanist.BaseBottomSheetScaffold
-import ru.surfstudio.compose.accompanist.keyboard.BaseViewKeyboard
+import ru.surfstudio.compose.accompanist.sample.otp.OtpScreen
+import ru.surfstudio.compose.accompanist.sample.otp.OtpViewModel
 import ru.surfstudio.compose.accompanist.sample.theme.TestTheme
 
 @ExperimentalComposeUiApi
@@ -51,6 +53,19 @@ class MainActivity : ComponentActivity() {
 @ExperimentalComposeUiApi
 @Composable
 fun MainScreen() {
+    val navController = rememberNavController()
+    NavHost(navController, startDestination = MainScreen.Start.route) {
+        composable(route = MainScreen.Start.route) {
+            StartScreen(navController)
+        }
+        composable(route = MainScreen.Otp.route) {
+            OtpScreen(OtpViewModel())
+        }
+    }
+}
+
+@Composable
+fun StartScreen(navController: NavController) {
     var isShowBottomSheetScaffold by remember { mutableStateOf(false) }
     val onClose = { isShowBottomSheetScaffold = false }
 
@@ -65,7 +80,12 @@ fun MainScreen() {
                 ) {
                     Text(text = "Show dialog")
                 }
-                BaseViewKeyboard(forgotCodeText = "Forgot code?")
+                Button(
+                    modifier = Modifier.padding(16.dp),
+                    onClick = { navController.navigate(MainScreen.Otp.route) }
+                ) {
+                    Text(text = "Open otp")
+                }
                 BaseBottomSheetScaffold(
                     isShow = isShowBottomSheetScaffold,
                     onClose = onClose,
@@ -133,12 +153,4 @@ fun DialogTitle(hasCloseIcon: Boolean, title: String, onClose: () -> Unit = {}) 
             )
         }
     }
-}
-
-@Preview("Light", device = Devices.PIXEL_2_XL)
-@Preview("Dark", uiMode = Configuration.UI_MODE_NIGHT_YES, device = Devices.PIXEL_2_XL)
-@ExperimentalComposeUiApi
-@Composable
-fun MainScreenPreview() {
-    MainScreen()
 }

@@ -42,13 +42,13 @@ fun BaseViewKeyboard(
     modifier: Modifier = Modifier,
     @DrawableRes fingerprintIconRes: Int = R.drawable.ic_default_fingerprint_24,
     @DrawableRes removeIconRes: Int = R.drawable.ic_default_arrow_back_24,
-    enable: Boolean = true,
+    isEnabled: Boolean = true,
     isShowRemove: Boolean = true,
     textColor: Color = MaterialTheme.colors.onSurface,
     backgroundColor: Color = MaterialTheme.colors.surface,
     isShowFingerprint: Boolean = false,
     isShowForgotPassword: Boolean = true,
-    onFingerprint: (() -> Unit)? = null,
+    onFingerprint: (() -> Unit) = {},
     onPress: (String) -> Unit = {},
     onRemove: () -> Unit = {},
     onActionButton: () -> Unit = {},
@@ -92,7 +92,7 @@ fun BaseViewKeyboard(
                         modifier = modifierKey,
                         shape = shape,
                         isSmall = isSmall,
-                        enable = enable,
+                        isEnabled = isEnabled,
                         value = it,
                         textColor = textColor,
                         backgroundColor = backgroundColor,
@@ -132,7 +132,7 @@ fun BaseViewKeyboard(
                 modifier = modifierKey,
                 shape = shape,
                 isSmall = isSmall,
-                enable = enable,
+                isEnabled = isEnabled,
                 value = "0",
                 textColor = textColor,
                 backgroundColor = backgroundColor,
@@ -145,46 +145,49 @@ fun BaseViewKeyboard(
                 modifier = modifierKey
             ) {
                 if (isShowRemove) {
-                    Box(
-                        modifier = Modifier
-                            .clickable {
-                                onRemove.invoke()
-                            }
-                            .padding(end = if (isSmall) 1.dp else 3.dp)
-                            .fillMaxSize(),
-                    ) {
-                        Image(
-                            painter = painterResource(removeIconRes),
-                            contentDescription = "Remove",
-                            colorFilter = ColorFilter.tint(textColor),
-                            modifier = Modifier
-                                .height(if (isSmall) 16.dp else 22.dp)
-                                .align(Alignment.Center)
-                        )
-                    }
+                    IconKey(
+                        isSmall = isSmall,
+                        iconResId = removeIconRes,
+                        contentDescription = "Remove",
+                        textColor = textColor,
+                        onClick = onRemove
+                    )
                 } else if (isShowFingerprint) {
-                    Box(
-                        modifier = (
-                                if (onFingerprint == null) Modifier else Modifier
-                                    .clickable {
-                                        onFingerprint.invoke()
-                                    }
-                                )
-                            .padding(end = if (isSmall) 0.dp else 3.dp)
-                            .fillMaxSize(),
-                    ) {
-                        Image(
-                            painter = painterResource(fingerprintIconRes),
-                            contentDescription = "Fingerprint",
-                            colorFilter = ColorFilter.tint(textColor),
-                            modifier = Modifier
-                                .height(if (isSmall) 26.dp else 40.dp)
-                                .align(Alignment.Center)
-                        )
-                    }
+                    IconKey(
+                        isSmall = isSmall,
+                        iconResId = fingerprintIconRes,
+                        contentDescription = "Fingerprint",
+                        textColor = textColor,
+                        onClick = onFingerprint
+                    )
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun IconKey(
+    isSmall: Boolean,
+    @DrawableRes iconResId: Int,
+    contentDescription: String,
+    textColor: Color,
+    onClick: (() -> Unit),
+) {
+    Box(
+        modifier = Modifier
+            .clickable { onClick.invoke() }
+            .padding(end = if (isSmall) 0.dp else 3.dp)
+            .fillMaxSize(),
+    ) {
+        Image(
+            painter = painterResource(iconResId),
+            contentDescription = contentDescription,
+            colorFilter = ColorFilter.tint(textColor),
+            modifier = Modifier
+                .height(if (isSmall) 26.dp else 40.dp)
+                .align(Alignment.Center)
+        )
     }
 }
 
@@ -194,7 +197,7 @@ private fun ViewKeyboardKey(
     shape: RoundedCornerShape,
     isSmall: Boolean,
     value: String,
-    enable: Boolean = true,
+    isEnabled: Boolean = true,
     textColor: Color = MaterialTheme.colors.onSurface,
     backgroundColor: Color = MaterialTheme.colors.surface,
     onPress: (String) -> Unit = {},
@@ -207,7 +210,7 @@ private fun ViewKeyboardKey(
     ) {
         Box(
             modifier = Modifier
-                .ifTrue(enable) {
+                .ifTrue(isEnabled) {
                     then(
                         clickable {
                             onPress.invoke(value)
