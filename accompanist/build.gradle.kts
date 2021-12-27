@@ -8,8 +8,6 @@ plugins {
 // dependencies versions
 val composeVersion: String by project
 val googleAccompanistVersion: String by project
-val pagingComposeVersion: String by project
-val modifierVersion: String by project
 
 // lib info
 val libVersion: String by project
@@ -76,7 +74,7 @@ dependencies {
 
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.paging:paging-compose:$pagingComposeVersion")
+    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
 
     implementation("androidx.fragment:fragment-ktx:1.4.0")
