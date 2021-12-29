@@ -1,6 +1,6 @@
-## Surf Accompanist
+## KeyGenQt Accompanist
 
-![picture](https://github.com/keygenqt/surf-accompanist/blob/master/data/just-image.png?raw=true)
+![picture](https://github.com/keygenqt/keygenqt-accompanist/blob/master/data/just-image.png?raw=true)
 
 Accompanist is a group of libraries that aim to
 supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with features that are commonly required by
@@ -8,14 +8,14 @@ developers but not yet available.
 
 ## Connection
 
-![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https://artifactory.keygenqt.com/artifactory/open-source/com/keygenqt/accompanist/surf-accompanist/maven-metadata.xml)
+![Maven metadata URL](https://img.shields.io/maven-metadata/v?metadataUrl=https://artifactory.keygenqt.com/artifactory/open-source/com/keygenqt/accompanist/keygenqt-accompanist/maven-metadata.xml)
 
 ```gradle
 repositories {
     maven("https://artifactory.keygenqt.com/artifactory/open-source")
 }
 dependencies {
-    implementation("com.keygenqt.accompanist:surf-accompanist:{version}")
+    implementation("com.keygenqt.accompanist:keygenqt-accompanist:{version}")
 }
 ```
 
