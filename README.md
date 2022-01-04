@@ -39,7 +39,7 @@ There are plans to add common functionality to make life easier for developers, 
 ## License
 
 ```
-Copyright 2021 Vitaliy Zarubin
+Copyright 2022 Vitaliy Zarubin
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
