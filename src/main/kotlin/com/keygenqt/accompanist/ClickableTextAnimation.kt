@@ -27,11 +27,6 @@ import kotlinx.coroutines.launch
  * @param onTextLayout How visual overflow should be handled.
  * @param onClick Callback that is executed when users click the text. This callback is called
  * with clicked character's offset.
- *
- * @since 0.0.3
- * @author Vitaliy Zarubin
- *
- * @see <a href="https://github.com/keygenqt/android-DemoCompose/blob/master/app/src/main/kotlin/com/keygenqt/demo_contacts/modules/other/ui/screens/onboarding/OnboardingItem2.kt#L69">OnboardingItem2.kt#L69</a>
  */
 @Composable
 fun ClickableTextColorAnimation(

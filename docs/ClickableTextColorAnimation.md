@@ -2,6 +2,8 @@ Clickable text with color animation on click
 
 ```kotlin
 /**
+ * Clickable text color animation
+ *
  * @param modifier Modifier to apply to this layout node.
  * @param colorDefault Color for default state.
  * @param colorAction Color for animate.
@@ -21,7 +23,9 @@ fun ClickableTextColorAnimation(
     modifier: Modifier = Modifier,
     colorDefault: Color,
     colorAction: Color,
+    colorDisable: Color? = null,
     text: String,
+    enabled: Boolean = true,
     delay: Long = 500,
     style: TextStyle = TextStyle.Default,
     underline: Boolean = true,

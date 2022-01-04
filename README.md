@@ -1,10 +1,12 @@
 ## KeyGenQt Accompanist
 
-![picture](https://github.com/keygenqt/keygenqt-accompanist/blob/master/data/just-image.png?raw=true)
-
 Accompanist is a group of libraries that aim to
 supplement [Jetpack Compose](https://developer.android.com/jetpack/compose) with features that are commonly required by
 developers but not yet available.
+
+### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_day/materialicons/18dp/1x/baseline_view_day_black_18dp.png?raw=true) [More details](https://keygenqt.github.io/keygenqt-accompanist/)
+
+![picture](https://github.com/keygenqt/keygenqt-accompanist/blob/master/data/just-image.png?raw=true)
 
 ## Connection
 
@@ -18,23 +20,6 @@ dependencies {
     implementation("com.keygenqt.accompanist:keygenqt-accompanist:{version}")
 }
 ```
-
-## Features:
-
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/search/manage_search/materialicons/18dp/1x/baseline_manage_search_black_18dp.png?raw=true) [MainScaffoldSearch](https://keygenqt.github.io/surf-accompanist/MainScaffoldSearch)
-The main block of the application with topBar which has a built-in search and loader
-
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/action/view_list/materialicons/18dp/1x/baseline_view_list_black_18dp.png?raw=true) [SwipeRefreshList](https://keygenqt.github.io/surf-accompanist/SwipeRefreshList)
-[LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#LazyColumn(androidx.compose.ui.Modifier,androidx.compose.foundation.lazy.LazyListState,androidx.compose.foundation.layout.PaddingValues,kotlin.Boolean,androidx.compose.foundation.layout.Arrangement.Vertical,androidx.compose.ui.Alignment.Horizontal,androidx.compose.foundation.gestures.FlingBehavior,kotlin.Function1))
-with embedded [SwipeRefresh](https://google.github.io/accompanist/swiperefresh/) and set of states for content: Error,
-Empty, Loading
-
-### ![picture](https://github.com/google/material-design-icons/blob/master/png/content/link/materialicons/18dp/1x/baseline_link_black_18dp.png?raw=true) [ClickableTextColorAnimation](https://keygenqt.github.io/surf-accompanist/ClickableTextColorAnimation)
-Clickable text with color animation on click
-
-## Future?
-
-There are plans to add common functionality to make life easier for developers, saving them from custom solutions.
 
 ## License
 

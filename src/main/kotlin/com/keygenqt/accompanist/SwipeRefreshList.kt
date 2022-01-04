@@ -11,6 +11,7 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
@@ -20,7 +21,6 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.SwipeRefreshState
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import com.keygenqt.accompanist.extensions.visible
 
 const val TAG = "SwipeRefreshList"
 
@@ -29,18 +29,12 @@ const val TAG = "SwipeRefreshList"
  *
  * @param modifier Modifier to apply to this layout node.
  * @param items List items.
- * @param state rememberSwipeRefreshState.
  * @param indicator the indicator that represents the current state. By default this will use a [SwipeRefreshIndicator].
  * @param contentPadding a padding around the whole content.
  * @param contentLoadState loadState  LoadState.Loading / LoadState.Error.
  * @param contentLoading Content screen LoadState.Loading.
  * @param contentEmpty Content screen empty data.
  * @param content Content item model.
- **
- * @since 0.0.3
- * @author Vitaliy Zarubin
- *
- * @see <a href="https://github.com/keygenqt/android-DemoCompose/blob/master/app/src/main/kotlin/com/keygenqt/demo_contacts/modules/favorite/ui/screens/listFavorite/FavoriteBody.kt#L57">FavoriteBody.kt#L57</a>
  */
 @Composable
 fun <T : Any> SwipeRefreshList(
@@ -115,7 +109,7 @@ fun <T : Any> SwipeRefreshList(
                 contentPadding = contentPadding,
                 modifier = Modifier
                     .fillMaxSize()
-                    .visible(items.loadState.refresh !is LoadState.Loading)
+                    .alpha(if (items.loadState.refresh !is LoadState.Loading) 1f else 0f)
             ) {
                 itemsIndexed(items) { index, item ->
                     item?.let {

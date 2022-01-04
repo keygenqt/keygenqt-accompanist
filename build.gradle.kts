@@ -7,8 +7,10 @@ plugins {
 }
 
 val composeVersion: String = findProperty("composeVersion") as? String ?: "1.1.0-rc01"
+val accompanistVersion: String = findProperty("accompanistVersion") as? String ?: "0.22.0-rc"
+val pagingComposeVersion: String = findProperty("pagingComposeVersion") as? String ?: "1.0.0-alpha14"
 
-version = "0.0.13"
+version = "0.0.14"
 group = "com.keygenqt.accompanist"
 
 spotless {
@@ -23,7 +25,7 @@ publishing {
         register("aar", MavenPublication::class) {
             groupId = group.toString()
             artifactId = project.name
-            artifact("$buildDir/outputs/aar/surf-accompanist-$version-debug.aar")
+            artifact("$buildDir/outputs/aar/keygenqt-accompanist-$version-debug.aar")
         }
     }
 }
@@ -50,7 +52,7 @@ android {
     defaultConfig {
         minSdk = 23
         targetSdk = 31
-        setProperty("archivesBaseName", "surf-accompanist-$version")
+        setProperty("archivesBaseName", "keygenqt-accompanist-$version")
     }
 
     composeOptions {
@@ -60,22 +62,11 @@ android {
     buildFeatures {
         compose = true
     }
-
-    kotlinOptions {
-        freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
-    }
 }
 
 dependencies {
-
     implementation("androidx.compose.ui:ui:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-
-    val pagingCompose = "1.0.0-alpha12"
-    implementation("androidx.paging:paging-compose:$pagingCompose")
-
-    val accompanist = "0.17.0"
-    implementation("com.google.accompanist:accompanist-insets:$accompanist")
-    implementation("com.google.accompanist:accompanist-pager:$accompanist")
-    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanist")
+    implementation("androidx.paging:paging-compose:$pagingComposeVersion")
+    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
 }

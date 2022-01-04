@@ -1,16 +1,14 @@
-site_name: Surf Accompanist
+site_name: KeyGenQt Accompanist
 
 # Repository
-repo_name: 'Surf Accompanist'
-repo_url: 'https://github.com/keygenqt/surf-accompanist'
+repo_name: 'KeyGenQt Accompanist'
+repo_url: 'https://github.com/keygenqt/keygenqt-accompanist'
 
 # Navigation
 nav:
   - 'Overview': index.md
-  - 'DotsNumbers': DotsNumbers.md
-  - 'ClickableTextColorAnimation': ClickableTextColorAnimation.md
-  - 'MainScaffoldSearch': MainScaffoldSearch.md
   - 'SwipeRefreshList': SwipeRefreshList.md
+  - 'ClickableTextColorAnimation': ClickableTextColorAnimation.md
 
 # Configuration
 theme:
