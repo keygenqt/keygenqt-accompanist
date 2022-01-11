@@ -4,7 +4,9 @@ LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Emp
 /**
  * @param modifier Modifier to apply to this layout node.
  * @param items List items.
- * @param state rememberSwipeRefreshState.
+ * @param listState rememberLazyListState.
+ * @param refreshState rememberSwipeRefreshState.
+ * @param indicator the indicator that represents the current state. By default this will use a [SwipeRefreshIndicator].
  * @param contentPadding a padding around the whole content.
  * @param contentLoadState loadState  LoadState.Loading / LoadState.Error.
  * @param contentLoading Content screen LoadState.Loading.
@@ -15,11 +17,14 @@ LazyColumn with embedded SwipeRefresh. and set of states for content: Error, Emp
 fun <T : Any> SwipeRefreshList(
     modifier: Modifier = Modifier,
     items: LazyPagingItems<T>,
-    state: SwipeRefreshState = rememberSwipeRefreshState(items.loadState.refresh is LoadState.Loading),
-    contentPadding: PaddingValues = PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 0.dp),
+    listState: LazyListState = rememberLazyListState(),
+    refreshState: SwipeRefreshState = rememberSwipeRefreshState(items.loadState.refresh is LoadState.Loading),
+    indicator: @Composable (state: SwipeRefreshState, refreshTrigger: Dp) -> Unit,
+    contentPadding: PaddingValues,
     contentLoadState: @Composable ((LoadState) -> Unit)? = null,
     contentLoading: @Composable (() -> Unit)? = null,
     contentEmpty: @Composable (() -> Unit)? = null,
+    contentError: @Composable (() -> Unit)? = null,
     content: @Composable (Int, T) -> Unit,
 )
 ```

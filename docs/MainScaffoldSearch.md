@@ -7,6 +7,7 @@ The main block of the application with topBar which has a built-in search and lo
  * @param contentLoad Content loader (default it CircularProgressIndicator) rendered in the topBar body
  * @param contentLoadState Loader state, true is enable false is disable
  * @param navigationIcon Navigation icon nullable
+ * @param navigationBodyIcon If you are not satisfied with the navigationIcon ImageVector
  * @param navigationIconDescription Navigation icon description
  * @param navigationIconOnClick Navigation icon callback click
  * @param searchIcon Search icon, default - Icons.Default.Search
@@ -28,6 +29,7 @@ fun MainScaffoldSearch(
     contentLoad: @Composable (() -> Unit)? = null,
     contentLoadState: Boolean = false,
     navigationIcon: ImageVector? = null,
+    navigationBodyIcon: @Composable (() -> Unit)? = null,
     navigationIconDescription: String = "Navigate up",
     navigationIconOnClick: () -> Unit = {},
     searchIcon: ImageVector = Icons.Default.Search,
