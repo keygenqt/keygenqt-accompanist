@@ -4,7 +4,7 @@ plugins {
 }
 
 // dependencies versions
-val composeVersion: String = "1.1.0-beta01" //by project
+val composeVersion: String = findProperty("composeVersion") as? String ?: "1.1.0-rc01"
 
 android {
     compileSdk = 31
@@ -44,7 +44,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
-    implementation("ru.surfstudio.compose:forms:0.0.18")
+    implementation("ru.surfstudio.compose:forms:0.0.25")
 
     debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
     testImplementation("junit:junit:4.13.2")

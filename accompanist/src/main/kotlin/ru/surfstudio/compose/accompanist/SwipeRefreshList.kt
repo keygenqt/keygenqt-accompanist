@@ -26,6 +26,7 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
@@ -131,7 +132,7 @@ fun <T : Any> SwipeRefreshList(
                 contentPadding = contentPadding,
                 modifier = Modifier
                     .fillMaxSize()
-                    .visible(items.loadState.refresh !is LoadState.Loading)
+                    .alpha(if (items.loadState.refresh !is LoadState.Loading) 1f else 0f)
             ) {
                 itemsIndexed(items) { index, item ->
                     item?.let {
