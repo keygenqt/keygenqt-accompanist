@@ -4,7 +4,7 @@ plugins {
 }
 
 // dependencies versions
-val composeVersion: String = findProperty("composeVersion") as? String ?: "1.1.0-rc01"
+val composeVersion: String = findProperty("composeVersion") as? String ?: "1.0.5"
 
 android {
     compileSdk = 31
