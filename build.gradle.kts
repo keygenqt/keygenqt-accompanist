@@ -33,9 +33,18 @@ android {
     }
 }
 
+// https://developer.android.com/jetpack/androidx/releases/compose
+val composeVersion = "1.2.1"
+// https://google.github.io/accompanist/
+val accompanistVersion = "0.26.5-rc"
+// https://developer.android.com/jetpack/androidx/releases/paging
+val pagingComposeVersion = "1.0.0-alpha16"
+// https://developer.android.com/jetpack/androidx/releases/compose-material3
+val material3Version = "1.0.0-rc01"
+
 dependencies {
-    implementation("androidx.compose.ui:ui:1.1.0-rc01")
-    implementation("androidx.compose.material:material:1.1.0-rc01")
-    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.22.0-rc")
+    implementation("androidx.compose.material3:material3:$material3Version")
+    implementation("androidx.compose.ui:ui:$composeVersion")
+    implementation("androidx.paging:paging-compose:$pagingComposeVersion")
+    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
 }
